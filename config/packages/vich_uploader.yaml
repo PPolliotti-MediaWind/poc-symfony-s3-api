@@ -1,0 +1,13 @@
+vich_uploader:
+    db_driver: orm
+    storage: flysystem
+
+    mappings:
+        pictures:
+            uri_prefix: /pictures
+            upload_destination: 'aws.storage'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+
+            inject_on_load: true
+            delete_on_update: true
+            delete_on_remove: true
